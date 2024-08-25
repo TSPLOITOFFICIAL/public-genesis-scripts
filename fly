@@ -1953,7 +1953,7 @@ local function reanimate()
 	}
 end
 
-btn("creepy crawler",function()
+btn("FLY THE BUG",function()
 	local t=reanimate()
 	if type(t)~="table" then return end
 	local getJoint=t.getJoint
@@ -1980,21 +1980,11 @@ btn("creepy crawler",function()
 	t.addmode("default",{
 		idle=function()
 			local sine=sine*60
-			neck.C0 = Lerp(neck.C0,cfMul(cf(0,0,0.5), euler(0.08726646259971647 * sin((sine + 20) * 0.05),0,3.141592653589793 + 0.3490658503988659 * sin((sine + -30) * 0.025))),deltaTime) 
-			rootJoint.C0 = Lerp(rootJoint.C0,cfMul(cf(0,-1.5 + 0.1 * sin(sine * 0.05),0), euler(3.141592653589793,0,-3.1590459461097367 + 0.05235987755982989 * sin(sine * 0.025))),deltaTime) 
-			leftShoulder.C0 = Lerp(leftShoulder.C0,cfMul(cf(-1,1.5,-0.1 * sin(sine * 0.05)), euler(1.5707963267948966,0,0.08726646259971647 * sin(sine * 0.025))),deltaTime) 
-			rightShoulder.C0 = Lerp(rightShoulder.C0,cfMul(cf(1,1.5,-0.1 * sin(sine * 0.05)), euler(1.5707963267948966,0,0.08726646259971647 * sin(sine * 0.025))),deltaTime) 
-			leftHip.C0 = Lerp(leftHip.C0,cfMul(cf(-1,-1.5,0.5 + -0.1 * sin((sine + 10) * 0.05)), euler(1.5707963267948966,0,0.08726646259971647 * sin(sine * 0.025))),deltaTime) 
-			rightHip.C0 = Lerp(rightHip.C0,cfMul(cf(1,-1.5,0.5 + -0.1 * sin((sine + 10) * 0.05)), euler(1.5707963267948966,0,0.08726646259971647 * sin(sine * 0.025))),deltaTime) 
+			RightHip.C0=Lerp(RightHip.C0,cfMul(cf(1,-1,0),angles(0,1.5707963267948966,1.5707963267948966)),deltaTime)  AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(-0.10000000149011612,1.9900000095367432,-0.6299999952316284),angles(-3.141592653589793,0,-3.141592653589793)),deltaTime)  RootJoint.C0=Lerp(RootJoint.C0,cfMul(cf(0,-1,0),angles(-3.3161255787892263,0,3.141592653589793)),deltaTime)  Neck.C0=Lerp(Neck.C0,cfMul(cf(0,1,0),angles(-6.1086523819801535,0,3.141592653589793)),deltaTime)  LeftShoulder.C0=Lerp(LeftShoulder.C0,cfMul(cf(-1,0.5,0),angles(0,-1.5707963267948966,-1.5707963267948966)),deltaTime)  LeftHip.C0=Lerp(LeftHip.C0,cfMul(cf(-1,-1,0),angles(0,-1.5707963267948966,-1.5707963267948966)),deltaTime)  AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cf(-0.131805419921875,-0.012441158294677734,0.2576751708984375),deltaTime)  RightShoulder.C0=Lerp(RightShoulder.C0,cfMul(cf(1,0.5,0),angles(0,1.5707963267948966,1.5707963267948966)),deltaTime)  AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cf(-0.0006103515625,0.0009996891021728516,-0.00005340576171875),deltaTime)  --MW_animatorProgressSave: RightLeg,1,0,0,1,0,0,0,1,-1,0,0,1,90,0,0,1,0,0,0,1,90,0,0,1,NewAccessory(07/05/2419:36:28)_Handle,-0.10000000149011612,0,0,1,-180,0,0,1,1.9900000095367432,0,0,1,0,0,0,1,-0.6299999952316284,0,0,1,-180,0,0,1,Torso,0,0,0,1,-190,0,0,1,-1,0,0,1,0,0,0,1,0,0,0,1,180,0,0,1,Head,0,0,0,1,-350,0,0,1,1,0,0,1,0,0,0,1,0,0,0,1,180,0,0,1,LeftArm,-1,0,0,1,0,0,0,1,0.5,0,0,1,-90,0,0,1,0,0,0,1,-90,0,0,1,LeftLeg,-1,0,0,1,0,0,0,1,-1,0,0,1,-90,0,0,1,0,0,0,1,-90,0,0,1,BonnieAccessory_Handle,-0.131805419921875,0,0,1,0,0,0,1,-0.012441158294677734,0,0,1,0,0,0,1,0.2576751708984375,0,0,1,0,0,0,1,RightArm,1,0,0,1,0,0,0,1,0.5,0,0,1,90,0,0,1,0,0,0,1,90,0,0,1,face_Handle,-0.0006103515625,0,0,1,0,0,0,1,0.0009996891021728516,0,0,1,0,0,0,1,-0.00005340576171875,0,0,1,0,0,0,1
 		end,
 		walk=function()
 			local sine=sine*60
-			neck.C0 = Lerp(neck.C0,cfMul(cf(0,0,0.5), euler(0.17453292519943295,0.03490658503988659 * sin((sine + 2.5) * 0.2),3.141592653589793 + -0.17453292519943295 * sin((sine + -10) * 0.2))),deltaTime) 
-			rootJoint.C0 = Lerp(rootJoint.C0,cfMul(cf(0,-1.5,0), euler(3.0543261909900767,0.08726646259971647 * sin((sine + 7.5) * 0.2),-3.1590459461097367 + -0.08726646259971647 * sin(sine * 0.2))),deltaTime) 
-			leftShoulder.C0 = Lerp(leftShoulder.C0,cfMul(cf(-1,1.5 + 0.5 * sin((sine + 10) * 0.2),0.3 + 0.2 * sin((sine + -10) * 0.2)), euler(1.6580627893946132 + 0.17453292519943295 * sin((sine + 15) * 0.2),0,-0.08726646259971647 * sin(sine * 0.2))),deltaTime) 
-			rightShoulder.C0 = Lerp(rightShoulder.C0,cfMul(cf(1,1.5 + 0.5 * sin((sine + -7.5) * 0.2),0.3 + 0.2 * sin((sine + 5) * 0.2)), euler(1.6580627893946132 + 0.17453292519943295 * sin(sine * 0.2),0,-0.08726646259971647 * sin(sine * 0.2))),deltaTime) 
-			leftHip.C0 = Lerp(leftHip.C0,cfMul(cf(-1,-1.5 + 0.5 * sin((sine + -7.5) * 0.2),0.5 + 0.2 * sin((sine + 5) * 0.2)), euler(1.6580627893946132 + 0.17453292519943295 * sin(sine * 0.2),0,-0.08726646259971647 * sin(sine * 0.2))),deltaTime) 
-			rightHip.C0 = Lerp(rightHip.C0,cfMul(cf(1,-1.5 + 0.5 * sin((sine + 10) * 0.2),0.5 + 0.2 * sin((sine + -7.5) * 0.2)), euler(1.6580627893946132 + -0.17453292519943295 * sin(sine * 0.2),0,-0.08726646259971647 * sin(sine * 0.2))),deltaTime) 
+			Neck.C0=Lerp(Neck.C0,cfMul(cf(0,1,0),angles(6.1086523819801535,0,3.141592653589793)),deltaTime)  RightHip.C0=Lerp(RightHip.C0,cfMul(cf(1,-1,0),angles(0,0.8726646259971648,0)),deltaTime)  AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(-0.10000000149011612,1.9900000095367432,-0.6299999952316284),angles(-3.141592653589793,0,-3.141592653589793)),deltaTime)  AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cf(-0.131805419921875,-0.012441158294677734,0.2576751708984375),deltaTime)  LeftShoulder.C0=Lerp(LeftShoulder.C0,cfMul(cf(-1,0.5,0),angles(0,-1.5707963267948966,-0.8726646259971648)),deltaTime)  AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cf(-0.0006103515625,0.0009996891021728516,-0.00005340576171875),deltaTime)  LeftHip.C0=Lerp(LeftHip.C0,cfMul(cf(-1,-1,0),angles(0,-0.8726646259971648,0)),deltaTime)  RightShoulder.C0=Lerp(RightShoulder.C0,cfMul(cf(1,0.5,0),angles(0,1.5707963267948966,0.8726646259971648)),deltaTime)  RootJoint.C0=Lerp(RootJoint.C0,cfMul(cf(0,5,0),angles(-3.3161255787892263,0,3.141592653589793)),deltaTime)  --MW_animatorProgressSave: Head,0,0,0,1,350,0,0,1,1,0,0,1,0,0,0,1,0,0,0,1,180,0,0,1,RightLeg,1,0,0,1,0,0,0,1,-1,0,0,1,50,0,0,1,0,0,0,1,0,0,0,1,NewAccessory(07/05/2419:36:28)_Handle,-0.10000000149011612,0,0,1,-180,0,0,1,1.9900000095367432,0,0,1,0,0,0,1,-0.6299999952316284,0,0,1,-180,0,0,1,BonnieAccessory_Handle,-0.131805419921875,0,0,1,0,0,0,1,-0.012441158294677734,0,0,1,0,0,0,1,0.2576751708984375,0,0,1,0,0,0,1,LeftArm,-1,0,0,1,0,0,0,1,0.5,0,0,1,-90,0,0,1,0,0,0,1,-50,0,0,1,face_Handle,-0.0006103515625,0,0,1,0,0,0,1,0.0009996891021728516,0,0,1,0,0,0,1,-0.00005340576171875,0,0,1,0,0,0,1,LeftLeg,-1,0,0,1,0,0,0,1,-1,0,0,1,-50,0,0,1,0,0,0,1,0,0,0,1,RightArm,1,0,0,1,0,0,0,1,0.5,0,0,1,90,0,0,1,0,0,0,1,50,0,0,1,Torso,0,0,0,1,-190,0,0,1,5,0,0,1,0,0,0,1,0,0,0,1,180,0,0,1 
 		end,
 		jump=jumplerp,
 		fall=jumplerp
